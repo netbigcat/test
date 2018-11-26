@@ -15,7 +15,7 @@ def formatdirectory(fdir):
                 quduan = re.search(r'(\d{1,4}\+\d-\d{1,4}\+\d)|(\d{1,4}\+\d-\d{1,4})|(\d{1,4}-\d{1,4}\+\d)|(\d{1,4}-\d{1,4})', subdir).group()
                 qdpath = os.path.join(dirname, quduan)
                 #print(subpath)
-                if not re.search(quduan, dirname):
+                if dirname.split('\\')[-1] != quduan:
                     if not os.path.exists(qdpath):
                         os.makedirs(qdpath)
                     newsubdir = subdir.replace('_Image', '')
@@ -46,7 +46,7 @@ def formatdirectory(fdir):
 
 dirs = [
 
-r"\\192.168.120.200\f\原始文件\数据问题\没赋色，重切\凤定2858线\切片",
+r"F:\原始文件\数据问题\182-188没赋色，重切\凤定2858线\切片"
 
 ]
 
