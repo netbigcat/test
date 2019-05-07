@@ -155,26 +155,6 @@ print(next(a))
 
 
 
-
-
-
-#############################
-
-
-
-
-from datetime import datetime
-dt = datetime(2015, 4, 19, 12, 20)  # 用指定日期时间创建datetime
-aa = dt.timestamp()  # 把datetime转换为timestamp
-print(aa)
-
-print(datetime.fromtimestamp(111.0))
-print()
-
-
-
-
-
 #############################
 
 
