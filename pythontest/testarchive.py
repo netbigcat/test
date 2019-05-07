@@ -371,7 +371,7 @@ for i in range(1000, 10000):
 """
 
 
-def trim(s):
+def trim(s):        # 对 '  '等只有空的字符串会报错
     if s[0] == ' ':
         return trim(s[1:])
     if s[-1] == ' ':
@@ -379,6 +379,12 @@ def trim(s):
     return s
 
 
+def trim(s):
+    while s[:1] == ' ':
+        s=s[1:]
+    while s[-1:] == ' ':
+        s=s[:-1]
+    return s
 
 
 
